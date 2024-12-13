@@ -1,9 +1,6 @@
 package com.learn.Airline.Entity;
 
-import java.time.LocalDateTime;
-
 import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,13 +9,12 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Ticket {
-
-		@Id
-	    private String ticketNumber;
-	    
-	    private String seatNumber;
-	    
-	    private LocalDateTime issueDate;
+public class Seat {
 	
+    private Flight flight;
+
+    private String seatNumber;
+    
+    private String classType; 
+
 }
