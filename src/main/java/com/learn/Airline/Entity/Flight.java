@@ -17,6 +17,8 @@ public class Flight {
 	@Id
 	private String flightNumber;
 	
+	private String flightName;
+	
 	private String departureAirport;
 	
     private String arrivalAirport;
@@ -26,9 +28,6 @@ public class Flight {
     private LocalDateTime arrivalTime;
     
     private int availableSeats;
-	
-	
-	
 	
 
 }

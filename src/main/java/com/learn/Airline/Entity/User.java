@@ -1,10 +1,19 @@
 package com.learn.Airline.Entity;
 
+// mvc - model view controller
+//model is our entity and view
+//controller is a median that takes request and give response
+
+import java.util.List;
+
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 //import jakarta.validation.constraints.Max;
 //import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
@@ -54,4 +63,6 @@ public class User {
 	@NotNull(message = "age cannot be null")
 	private int age;
 
+	@OneToMany(cascade = CascadeType.ALL,mappedBy = "user")
+	private List<Ticket> tickets;
 }

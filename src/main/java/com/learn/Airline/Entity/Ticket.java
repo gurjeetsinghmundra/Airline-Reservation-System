@@ -2,8 +2,11 @@ package com.learn.Airline.Entity;
 
 import java.time.LocalDateTime;
 
+
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -20,5 +23,8 @@ public class Ticket {
 	    private String seatNumber;
 	    
 	    private LocalDateTime issueDate;
+	    
+		@ManyToOne
+		private User user;
 	
 }
