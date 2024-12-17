@@ -46,11 +46,11 @@ public class User {
 	@Size (min =2 , max = 50)
 	private String lastName;
 	
-	@Column(nullable = false, unique = true)
-	@NotBlank(message = "email id cannot be blank")
-	@NotNull(message = "email id cannot be null")
+	
+
 	//regex101 community patterns
 	@Pattern(regexp = "^((?!\\.)[\\w\\-_.]*[^.])(@\\w+)(\\.\\w+(\\.\\w+)?[^.\\W])$")
+	@Column(nullable = false, unique = true)
 	private String emailId;
 	
 	@Column(nullable = false)
@@ -63,6 +63,5 @@ public class User {
 	@NotNull(message = "age cannot be null")
 	private int age;
 
-	@OneToMany(cascade = CascadeType.ALL,mappedBy = "user")
-	private List<Ticket> tickets;
+	
 }
