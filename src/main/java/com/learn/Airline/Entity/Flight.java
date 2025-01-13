@@ -1,10 +1,14 @@
 package com.learn.Airline.Entity;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -36,5 +40,14 @@ public class Flight {
 	@Column(nullable = false)
     private int availableSeats;
 	
-
+//	Relations
+	@ManyToOne Airport airport;
+	
+	
+	@OneToMany(cascade = {CascadeType.PERSIST,CascadeType.MERGE},mappedBy = "flight")
+	private List<Seat> seats;
+	
+	
+	
+	
 }

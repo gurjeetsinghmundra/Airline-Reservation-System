@@ -1,8 +1,13 @@
 package com.learn.Airline.Entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToOne;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -21,5 +26,22 @@ public class Seat {
     
     @Column(nullable = false)
     private String classType; 
+    
+    @Column(nullable = false)
+//    private Boolean occupied=Boolean.FALSE;
+    private Boolean occupied=false;
+    
+// Relations    
+    
+    @JsonBackReference
+    @OneToOne(cascade = CascadeType.ALL,mappedBy = "seat")
+    private Passenger passenger;
+    
+    @JsonBackReference
+    @OneToOne(cascade = CascadeType.ALL,mappedBy = "seat")
+    private Ticket ticket;
 
+    @ManyToOne
+    private Flight flight;
+    
 }

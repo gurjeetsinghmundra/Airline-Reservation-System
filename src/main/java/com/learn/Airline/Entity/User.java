@@ -1,13 +1,16 @@
 package com.learn.Airline.Entity;
 
-// mvc - model view controller
-//model is our entity and view
-//controller is a median that takes request and give response
-
 import java.util.List;
 
 
 import jakarta.persistence.CascadeType;
+
+// mvc - model view controller
+//model is our entity and view
+//controller is a median that takes request and give response
+
+
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -62,6 +65,10 @@ public class User {
 	@Column(nullable = false)
 	@NotNull(message = "age cannot be null")
 	private int age;
-
+	
+	//Relations 
+	
+	@OneToMany(cascade ={CascadeType.PERSIST,CascadeType.MERGE},mappedBy = "user")
+	private List<Ticket> tickets;
 	
 }

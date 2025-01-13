@@ -2,9 +2,13 @@ package com.learn.Airline.Entity;
 
 import java.time.LocalDate;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -42,6 +46,14 @@ public class Passenger {
 	
 	@Column(nullable = false)
 	private String address;
+	
+	@JsonManagedReference
+	@OneToOne(cascade = CascadeType.ALL) //dono taraf changes
+	private Seat seat;
+	
+	
+
+	
 
 
 }

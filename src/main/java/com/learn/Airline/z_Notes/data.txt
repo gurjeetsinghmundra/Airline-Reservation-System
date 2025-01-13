@@ -1,0 +1,12 @@
+{
+    "firstName":"Rayyan",
+    "lastName":"Malik",
+    "emailId":"rayyan@gmail.com",
+    "password":"Rayyan@123",
+    "age":"25",
+    "ticket":{
+    "seatNumber":"103",
+    "issueDate":"2024-12-10T11:00:00"
+    }
+}
+
