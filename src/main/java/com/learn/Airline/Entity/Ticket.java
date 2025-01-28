@@ -38,7 +38,7 @@ public class Ticket {
 		private User user;
 		
 		@OneToOne(cascade = CascadeType.ALL) //dono taraf changes
-		private Seat seat;
+		private Seat seat1;
 		
 		
 	   

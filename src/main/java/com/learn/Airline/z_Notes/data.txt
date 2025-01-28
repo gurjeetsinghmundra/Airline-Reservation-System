@@ -1,3 +1,5 @@
+//For User
+
 {
     "firstName":"Rayyan",
     "lastName":"Malik",
@@ -10,3 +12,24 @@
     }
 }
 
+//For Flights
+
+{
+    "flightNumber":"101",
+    "flightName":"Air India",
+    "departureAirport":"Delhi Airport",
+    "arrivalAirport":"Mumbai Aiport",
+    "departureTime":"2025-01-24T10:00:00",
+    "arrivalTime":"2025-01-24T10:00:00",
+    "availableSeats":"95"
+}
+
+ {
+    "flightNumber": "204",
+    "flightName": "GoAir",
+    "departureAirport": "Kolkata Netaji Subhash Chandra Bose Airport",
+    "arrivalAirport": "Kathmandu Tribhuvan International Airport",
+    "departureTime": "2025-02-20T16:30:00",
+    "arrivalTime": "2025-02-20T17:30:00",
+    "availableSeats": "80"
+ }

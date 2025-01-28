@@ -5,6 +5,8 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
@@ -29,7 +31,7 @@ public class Seat {
     
     @Column(nullable = false)
 //    private Boolean occupied=Boolean.FALSE;
-    private Boolean occupied=false;
+    private Boolean occupied;
     
 // Relations    
     
@@ -38,7 +40,7 @@ public class Seat {
     private Passenger passenger;
     
     @JsonBackReference
-    @OneToOne(cascade = CascadeType.ALL,mappedBy = "seat")
+    @OneToOne(cascade = CascadeType.ALL,mappedBy = "seat1")
     private Ticket ticket;
 
     @ManyToOne

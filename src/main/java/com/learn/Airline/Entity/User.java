@@ -10,7 +10,6 @@ import jakarta.persistence.CascadeType;
 //controller is a median that takes request and give response
 
 
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -70,5 +69,7 @@ public class User {
 	
 	@OneToMany(cascade ={CascadeType.PERSIST,CascadeType.MERGE},mappedBy = "user")
 	private List<Ticket> tickets;
+	
+	private String userImage;
 	
 }
