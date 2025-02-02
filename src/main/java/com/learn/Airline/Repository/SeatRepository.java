@@ -9,8 +9,9 @@ import com.learn.Airline.Projection.SeatProjection;
 
 
 @RepositoryRestResource(excerptProjection = SeatProjection.class ) 
-
 @CrossOrigin
 public interface SeatRepository extends JpaRepository<Seat, String> {
+	
+	
 
 }

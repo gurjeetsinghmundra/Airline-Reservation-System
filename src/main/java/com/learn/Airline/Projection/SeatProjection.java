@@ -1,5 +1,7 @@
 package com.learn.Airline.Projection;
 
+import org.springframework.beans.factory.annotation.Value;
+
 public interface SeatProjection {
 
 	
@@ -8,4 +10,13 @@ public interface SeatProjection {
 	String getClassType();
 	
 	Boolean getOccupied();
+	
+	@Value("#{target.passenger?.passengerFirstName}")
+	String getPassengerFirstName();
+	
+	
+	
+	
+	
+	
 }

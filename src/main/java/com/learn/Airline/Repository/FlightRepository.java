@@ -8,6 +8,7 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
 import com.learn.Airline.Entity.Flight;
+import com.learn.Airline.Projection.FlightProjection;
 import com.learn.Airline.Projection.SeatProjection;
 
 @RepositoryRestResource(excerptProjection = FlightProjection.class ) 

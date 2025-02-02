@@ -2,6 +2,7 @@ package com.learn.Airline.Entity;
 
 import java.time.LocalDateTime;
 
+import org.hibernate.annotations.CreationTimestamp;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
@@ -30,6 +31,7 @@ public class Ticket {
 	    private String seatNumber;
 	    
 		@Column(nullable = false)
+		@CreationTimestamp
 	    private LocalDateTime issueDate;
 		
 //		Relations

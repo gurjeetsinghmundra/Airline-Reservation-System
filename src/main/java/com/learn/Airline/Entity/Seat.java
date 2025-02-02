@@ -26,7 +26,7 @@ public class Seat {
     @Id
     private String seatNumber;
     
-    @Column(nullable = false)
+    @Column
     private String classType; 
     
     @Column(nullable = false)
@@ -35,7 +35,6 @@ public class Seat {
     
 // Relations    
     
-    @JsonBackReference
     @OneToOne(cascade = CascadeType.ALL,mappedBy = "seat")
     private Passenger passenger;
     
