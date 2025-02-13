@@ -38,10 +38,10 @@ public class Flight {
 	@Column(nullable = false)
     private LocalDateTime arrivalTime;
     
-	@Column(nullable = false)
+	@Column
     private int availableSeats;
 	
-	@Column(nullable = false)
+	@Column
 	private int totalSeats;
 	
 //	Relations

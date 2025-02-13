@@ -16,3 +16,6 @@ SELECT * FROM flight;
 
 SELECT * FROM seat;
 SELECT * FROM passenger;
+
+
+-- 
